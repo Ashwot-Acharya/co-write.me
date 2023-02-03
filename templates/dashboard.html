@@ -10,17 +10,21 @@
 </head>
 
 <body>
-    <h1>Welcome to Co-Author</h1>
-    <p> This is you AI Helper for Writing blog article , stories and various other things of your choice  </p>
-    <a href="{{url_for('logout')}}">Press here to logout</a>
+    <div class="dashboard">
+        <h1 class="text-cent fat">Welcome to Co-write.me your personal  Co-Author</h1>
+    <p class="text-cent"> This is you AI Helper for Writing blog article , stories and various other things of your choice  </p>
+<div class="logoutbtn">    <a href="{{url_for('logout')}}">Logout</a>
+</div>
     <form method="post">
         {{ form.hidden_tag() }}
-        <div>{{ form.text }}</div>
+        <div class="cow">{{ form.text }}</div>
         <div>{{ form.submit }}</div>
     </form>
-    <div>
+    <div class="text-reply">
         {{reply}}
     </div>
+    </div>
+    
 </body>
 
 </html>

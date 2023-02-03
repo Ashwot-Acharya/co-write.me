@@ -1,5 +1,7 @@
 import cohere
-api_key ="7vFzcs1RJQGNpiCbmwpVcyXlCK4YBV8q80ngXDL6"
+api_key ="Enter your API key here"
+
+
 
 co = cohere.Client(api_key)
 def generate_text_cohere(prompt):
