@@ -4,12 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Co-Here.me</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
 </head>
-<body>
-    <div>
+<body onload="typeWriter()">
+    <section>
+        <nav>
+            <div class="header">
+                <div class="logo-img">
+                    <img src="../images/coherelogo.png" alt="">
+                </div>
+            </div>
+            <div class="content-tems">
+                <a href=""><p>Login</p></a>
+                <a href=""><p>Register</p></a>
+            </div>
+        </nav>
+
+        <section class="main">
+            <!-- <div class="swiper"> -->
+                <!-- <div class="swiper-wrapper"> -->
+                    <div class="background-cover">
+                        <div class="cover-illust"></div>
+                        <img src="../images/img1.png" alt="">
+                    </div>
+                <!-- </div> -->
+            <!-- </div> -->
+            
+            <div class="text-center mt-10">
+                <h1 class="text-header">Construct</h1>
+                <p id="demo">Generate ideas and develop a stunning piece of work</p>
+                <a href="">
+                <button class="get-started">
+                    Get Started
+                </button>
+            </a>
+            </div>
+           
+        </section>
+        <section class="w-80">
+            <div class="grid-2 mt-10 text-color-white mb-10">
+                <div>
+                    <h2 class="text-xl">About Co-Here.me</h2>
+                    <p class="mt-2 font-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis maxime aut sunt tenetur inventore adipisci, ea, illo dignissimos itaque, velit reprehenderit qui optio fugiat harum voluptas? Dolorem rerum cupiditate error.</p>
+                    <p class="mt-2 font-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis maxime aut sunt tenetur inventore adipisci, ea, illo dignissimos itaque, velit reprehenderit qui optio fugiat harum voluptas? Dolorem rerum cupiditate error.</p>
+                    <p class="mt-2 font-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis maxime aut sunt tenetur inventore adipisci, ea, illo dignissimos itaque, velit reprehenderit qui optio fugiat harum voluptas? Dolorem rerum cupiditate error.</p>
+                    <!-- <p class="mt-2 font-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis maxime aut sunt tenetur inventore adipisci, ea, illo dignissimos itaque, velit reprehenderit qui optio fugiat harum voluptas? Dolorem rerum cupiditate error.</p> -->
+                    <!-- <p class="mt-2 font-semibold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis maxime aut sunt tenetur inventore adipisci, ea, illo dignissimos itaque, velit reprehenderit qui optio fugiat harum voluptas? Dolorem rerum cupiditate error.</p> -->
+                </div>
+                <div class="border" onload="typeWriter2()">
+                    <p class="font-semibold" id="demo2"></p>
+                </div>
+            </div>
+        </section>
         
-    </div>
-    
+        <footer>
+            <section class="w-50">
+                <div class="grid-3 pt-10 text-color-white">
+                    <div>
+                        <div class="footer-img">
+                            <img src="../images/coherelogo.png" alt="">
+                        </div>
+                        <div class="sssd">
+                            <p>Generate something amazing</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h2 class="text-lg">Product</h2>
+                        <div class="flex sssd">
+                            <a href="" >Github</a>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <h2 class="text-lg">Developed by</h2>
+                        <div class="sssd">
+                            <p><a href="https://github.com/SamShr12" >Samyam</a>, <a href="https://github.com/Ashwot-Acharya">Ashwot</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </section>
+    <script>
+        var i = 0;
+        var txt = "Lorem ipsum dolor sit amet consectetur adipisicing elit. elit. Ea sapiente totam voluptate dolores aut, eum voluptatem repellendus voluptatum alias labore exercitationem quidem! Ad facilis illo, velit recusandae quisquam esse ducimus? elit. Ea sapiente totam voluptate dolores aut, eum voluptatem repellendus voluptatum alias labore exercitationem quidem! Ad facilis illo, velit recusandae quisquam esse ducimus? elit. Ea sapiente totam voluptate dolores aut, eum voluptatem repellendus voluptatum alias labore exercitationem quidem! Ad facilis illo, velit recusandae quisquam esse ducimus?  Ea sapiente totam voluptate dolores aut, eum voluptatem repellendus voluptatum alias labore exercitationem quidem! Ad facilis illo, velit recusandae quisquam esse ducimus? "
+        var speed = 90;
+
+        function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("demo2").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+        }
+
+        // function typeWriter2() {
+        // if (i < txt2.length) {
+        //     document.getElementById("demo2").innerHTML += txt2.charAt(i);
+        //     i++;
+        //     setTimeout(typeWriter2, speed);
+        // }
+        // }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
