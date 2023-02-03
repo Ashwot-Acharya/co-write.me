@@ -48,7 +48,7 @@ class GenerateText(FlaskForm):
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html', static_folder='static')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -60,7 +60,7 @@ def login():
             if bcrypt.check_password_hash(user.password, form.password.data):
                 login_user(user)
                 return redirect(url_for('dashboard'))
-    return render_template('login.html', form=form)
+    return render_template('login.html',static_folder="static" ,form=form)
 
 
 @app.route('/dashboard', methods=['GET', 'POST'])
@@ -70,12 +70,12 @@ def dashboard():
     reply = ""
 
     if(request.method=="GET"):
-        return render_template('dashboard.html',form = form , reply = reply)
+        return render_template('dashboard.html',form = form,static_folder='static' , reply = reply)
     else:
         text = form.text.data
         reply = text + services.generate_text_cohere(text)
         
-        return render_template('dashboard.html', reply = reply , form = form)
+        return render_template('dashboard.html', reply = reply, static_folder='static' , form = form)
 
 
 @app.route('/logout', methods=['GET', 'POST'])
@@ -96,7 +96,7 @@ def register():
         db.session.commit()
         return redirect(url_for('login'))
 
-    return render_template('register.html', form=form)
+    return render_template('register.html', static_folder='static' , form=form)
 
 
 if __name__ == "__main__":

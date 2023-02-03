@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/dashboard.css"/>
     <title>Dashboard</title>
 </head>
 
 <body>
-    <h1>Hello you are logged in.</h1>
+    <h1>Welcome to Co-Author</h1>
+    <p> This is you AI Helper for Writing blog article , stories and various other things of your choice  </p>
     <a href="{{url_for('logout')}}">Press here to logout</a>
     <form method="post">
         {{ form.hidden_tag() }}
-        {{ form.text }}
-        {{ form.submit }}
+        <div>{{ form.text }}</div>
+        <div>{{ form.submit }}</div>
     </form>
     <div>
         {{reply}}

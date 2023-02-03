@@ -1,0 +1,40 @@
+.bdy{
+   background-color: azure;
+
+}
+.login-form{
+    text-align: center;
+    position:absolute;
+    border-radius: 20px;
+    padding:50px;
+    background-color: #ccc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+input[type=text],input[type=password]{
+   width: 200px;
+   height: 35px;
+   margin-bottom:10px ;
+   border-radius: 10px;
+   border: 1px solid #ccc; 
+}
+input[type=submit]{
+    font-weight: 900;
+    padding: 10px 15px 10px 15px;
+    border: 1px solid #47baef;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    background: #47baef;
+    transition: background 400ms;
+}
+input[type=submit]:hover{
+    background: #2e7494;
+}
+
+.text-sm{
+    margin-top: 10px;
+    font-size: 12px;
+}
